@@ -47,7 +47,10 @@ app.get('/bad', (req,res)=> {
     res.send({
         errorMessage: "Couldn't find that!!"
     })
-})
+});
+app.get("/projects", (req,res)=> {
+    res.render("projects.hbs");
+});
 
 app.listen(port, ()=> {
     console.log(`Server has started on ${port}`);
